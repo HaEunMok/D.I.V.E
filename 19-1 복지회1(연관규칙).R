@@ -33,7 +33,7 @@ data<-data[-which(del==3|del==5),]#796379
 transactionData<- ddply(data, c("전표","Date"),
                         function(df1)paste(df1$품명,
                                            collapse=","))
-#방법1 팜내시간만 잘라내는 법:format(), str했을 때POsIX형태여야 format으로 시:분:초 분리가능
+#방법1 판매시간만 잘라내는 법:format(), str했을 때POsIX형태여야 format으로 시:분:초 분리가능
 #방법2: 판매시간만 잘라내는 법:substr(): 문자열을 자르는 함수 
 
 head(transactionData)
